@@ -1,0 +1,20 @@
+{
+  "name": "action-mattermost-attachment-notification",
+  "version": "0.1.0",
+  "description": "GitHub Action to send Mattermost notifications on an attachment manner",
+  "main": "index.js",
+  "repository": "https://github.com/ePages-de/action-mattermost-attachment-notification",
+  "author": "Unai Abrisketa <uabrisketa@epages.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "npx ncc build index.js -o dist"
+  },
+  "dependencies": {
+    "@actions/core": "^1.10.1",
+    "@actions/http-client": "^2.2.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.38.1"
+  }
+}

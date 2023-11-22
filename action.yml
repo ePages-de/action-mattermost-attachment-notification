@@ -1,0 +1,63 @@
+name: Mattermost Attachment Notification
+description: GitHub Action to send Mattermost notifications on an attachment manner
+author: Unai Abrisketa <uabrisketa@epages.com>
+
+inputs:
+  webhook:
+    description: Webhook URI.
+    required: true
+  text:
+    description: Text to be included in the attachment. It can be formatted using Markdown.
+    required: true
+  notification_type:
+    description: Left border color for the attachment by string. One of `success`, `warning`, `danger` and `info`. Defaults to `info`.
+    required: false
+  color:
+    description: Hex color code that will be used as the left border color for the attachment. Overrides `notification_type`.
+    required: false
+  channel:
+    description: Channel message will be posted in or username to send direct message.
+    required: false
+  username:
+    description: Username the message posts as.
+    required: false
+  icon_url:
+    description: Profile picture the message posts with.
+    required: false
+  fallback:
+    description: A required plain-text summary of the attachment.
+    required: false
+  pretext:
+    description: Line of text that will be shown above the attachment.
+    required: false
+  author_name:
+    description: Name used to identify the author.
+    required: false
+  author_link:
+    description: URL used to hyperlink the `author_name`.
+    required: false
+  author_icon:
+    description: URL used to display a 16x16 pixel icon beside the `author_name`.
+    required: false
+  title:
+    description: Title displayed below the author information in the attachment.
+    required: false
+  title_link:
+    description: URL used to hyperlink the `title`.
+    required: false
+  image_url:
+    description: URL to an image file (GIF, JPEG, PNG, BMP, or SVG) that is displayed inside a message attachment.
+    required: false
+  thumb_url:
+    description: URL to an image file (GIF, JPEG, PNG, BMP, or SVG) that is displayed as a 75x75 pixel thumbnail on the right side of an attachment.
+    required: false
+  footer:
+    description: Line of text that will be displayed at the bottom of the attachment.
+    required: false
+  footer_icon:
+    description: URL to an image file (GIF, JPEG, PNG, BMP, or SVG) that is displayed as a 16x16 pixel thumbnail before the footer text.
+    required: false
+
+runs:
+  using: node20
+  main: dist/index.js
