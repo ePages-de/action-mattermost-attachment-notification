@@ -40,3 +40,8 @@ jobs:
           text: Application successfully deployed
           notification_type: success
 ```
+
+## Reference articles
+
+* [Mattermost outgoing webhooks](https://developers.mattermost.com/integrate/webhooks/outgoing/)
+* [Mattermost message attachments](https://developers.mattermost.com/integrate/reference/message-attachments/)
