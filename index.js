@@ -21,7 +21,7 @@ async function run() {
     const text = core.getInput('text');
 
     if (!text) {
-      core.setFailed('You have to provide text or json param');
+      core.setFailed('You have to provide text param');
       return;
     }
 
